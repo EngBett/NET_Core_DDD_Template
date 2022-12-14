@@ -1,0 +1,3 @@
+﻿cd Scv.Notifications.Infrastructure
+dotnet ef --startup-project ../Scv.Notifications.Api/ migrations add InitialMigration
+dotnet ef --startup-project ../Scv.Notifications.Api/ database update
