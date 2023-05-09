@@ -3,7 +3,7 @@ using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace ScvAgritech.Onboarding.Application.Interfaces;
+namespace Template.Application.Interfaces;
 
 public interface IRestClient
 {
