@@ -9,7 +9,7 @@
     }
   },
   "profiles": {
-    "ScvAgritech.Notifications.Api": {
+    "Template.Api": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,

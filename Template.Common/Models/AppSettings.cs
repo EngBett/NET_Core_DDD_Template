@@ -2,6 +2,7 @@
 {
     public class AppSettings
     {
+        public const string Name = "AppSettings";
         public string[] AllowedOrigins { get; set; }
         public string Authority { get; set; }
         public string[] DefaultApis { get; set; }
@@ -16,5 +17,6 @@
         public bool EnableAutoMigration { get; set; }
         public bool UseLoggerMiddleWare { get; set; }
         public string DefaultRedirectUrl { get; set; }
+        public bool ShowSwagger { get; set; }
     }
 }
