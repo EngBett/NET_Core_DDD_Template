@@ -27,6 +27,7 @@ public static class StartupHelper
         services.AddControllers(opt => { opt.Filters.Add(typeof(GlobalExceptionFilter)); });
 
         services.AddHttpContextAccessor();
+        services.AddHealthChecks();
         services.AddCors(options =>
         {
             options.AddPolicy("CorsPolicy",
