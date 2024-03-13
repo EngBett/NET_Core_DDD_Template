@@ -10,11 +10,13 @@ namespace Template.Application
     {
         public static IServiceCollection AddMediatRDependency(this IServiceCollection services)
         {
-            services.AddAutoMapper(Assembly.GetExecutingAssembly());
-            services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
-            services.AddMediatR(Assembly.GetExecutingAssembly());
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidatorBehavior<,>));
-            services.AddHttpClient("ekyc", c => {  });
+            services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
+            services.AddMediatR(conf =>
+            {
+                conf.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly());
+                conf.AddOpenBehavior(typeof(ValidatorBehavior<,>));
+            });
             
             return services;
         }

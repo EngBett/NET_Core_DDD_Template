@@ -1,8 +1,6 @@
 using Template.Api;
-using Template.Domain.Models;
 using Template.Infrastructure.DataAccess;
 using Microsoft.EntityFrameworkCore;
-using Newtonsoft.Json;
 using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
